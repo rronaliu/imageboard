@@ -63,7 +63,7 @@ const ListPosts = () => {
       <div className="row d-flex flex-row-reverse mt-2">
         <div className="col-md-2 ">
       <input
-        className="form-control form-control-sm"
+        className="form-control form-control-sm btn-dark"
         type="text"
         placeholder="Search Posts"
         onChange={(e) => setSearch(e.target.value)}
@@ -74,9 +74,9 @@ const ListPosts = () => {
     <div className="d-flex flex-wrap justify-content-around">
         {filteredPosts.map((post) => (
           
-      <Card key={post.post_id} className="text-center col-md-4 col-lg-3 m-1 my-5" style={{ maxWidth: "18rem" }}>
-        <button className="btn btn-outline-danger" onClick={() => deletePost(post.post_id)}>X</button>
-        <Link to={`/posts/${post.post_id}`} style={{textDecoration: "none", color: "black"}}>
+      <Card key={post.post_id} className="text-center col-md-4 col-lg-3 m-1 my-5 bg-dark" style={{ maxWidth: "18rem" }}>
+        {/* <button className="btn btn-outline-danger" onClick={() => deletePost(post.post_id)}>X</button> */}
+        <Link to={`/posts/${post.post_id}`} style={{textDecoration: "none", color: "white"}}>
         <Card.Body>
         <Card.Img variant="top" src={post.image} />
           <Card.Title className="mt-3">{post.description}</Card.Title>

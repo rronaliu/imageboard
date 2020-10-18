@@ -7,9 +7,10 @@ CREATE TABLE post (
     created_at TIMESTAMP NOT NULL
 );
 
-CREATE TABLE reply (
-    reply_id SERIAL PRIMARY KEY,
-    body VARCHAR,
-    created_at TIMESTAMP NOT NULL,
-    image VARCHAR(255)
+CREATE TABLE comment (
+    cid SERIAL PRIMARY KEY,
+    comment VARCHAR,
+    image VARCHAR(255),
+    post_id INT REFERENCES post(post_id),
+    created_at TIMESTAMP NOT NULL
 );

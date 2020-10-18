@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react";
 
+
 const InputPost = () => {
   const [description, setDescription] = useState("");
   const [body, setBody] = useState("");
@@ -51,14 +52,14 @@ const InputPost = () => {
       <form className="text-center mt-5" onSubmit={onSubmitForm}>
         <input
           type="text"
-          className="form-control m-2"
+          className="form-control my-2 btn-dark"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
           required
         />
         <textarea
           type="text"
-          className="form-control m-2"
+          className="form-control mb-2 btn-dark"
           rows="3"
           value={body}
           onChange={(e) => setBody(e.target.value)}
@@ -77,7 +78,7 @@ const InputPost = () => {
         ): (
           <img src={image} style={{width:'180px'}} />
         )}
-        <button className="btn btn-secondary btn-block">Post</button>
+        <button className="btn btn-dark btn-block">Post</button>
       </form>
     </Fragment>
   );

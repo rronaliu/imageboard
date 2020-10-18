@@ -14,6 +14,7 @@ function App() {
       <Switch>
         <Route path ="/" exact component={Home} />
         <Route path ="/posts/:id" component={Post} />
+        {/* <Route path ="/replies/:id" component={Reply} /> */}
         </Switch>
         </div>
     </Router>
