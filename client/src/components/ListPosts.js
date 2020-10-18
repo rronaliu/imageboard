@@ -17,7 +17,7 @@ const ListPosts = () => {
 
         try {
             
-            const response = await fetch("http://localhost:5000/posts");
+            const response = await fetch("/posts");
             const jsonData = await response.json();
 
             setPosts(jsonData);
@@ -31,16 +31,16 @@ const ListPosts = () => {
 
 
     //DELETE POST
-    const deletePost = async id => {
-      try {
-          const response = await fetch(`http://localhost:5000/posts/${id}`, {
-              method: "DELETE"
-          });
-          setPosts(posts.filter(post => post.post_id !== id));
-      } catch (err) {
-          console.error(err.message)
-      }
-  }
+  //   const deletePost = async id => {
+  //     try {
+  //         const response = await fetch(`/posts/${id}`, {
+  //             method: "DELETE"
+  //         });
+  //         setPosts(posts.filter(post => post.post_id !== id));
+  //     } catch (err) {
+  //         console.error(err.message)
+  //     }
+  // }
     
 
     useEffect(() => {

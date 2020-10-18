@@ -35,7 +35,7 @@ const InputComment = () => {
 
       try {
           const commentBody = {comment, image};
-          const response = await fetch(`http://localhost:5000/posts/${id}/addComment`, {
+          const response = await fetch(`/posts/${id}/addComment`, {
               method: "POST",
               headers: { "Content-Type" : "application/json"},
               body: JSON.stringify(commentBody),

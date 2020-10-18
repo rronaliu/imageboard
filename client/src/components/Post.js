@@ -15,7 +15,7 @@ const Post = ({ match }) => {
   const getPost = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/posts/${match.params.id}`
+        `/posts/${match.params.id}`
       );
       const post = await response.json();
 
