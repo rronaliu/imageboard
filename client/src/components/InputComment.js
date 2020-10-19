@@ -48,7 +48,7 @@ const InputComment = () => {
           console.error(err.message)
       }
       history.push("/");
-      // history.push(location.pathname);
+      history.push(location.pathname);
   }
 
   return (
