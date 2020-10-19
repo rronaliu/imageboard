@@ -1,10 +1,13 @@
 import React, { Fragment, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams, useHistory } from "react-router-dom";
 
 
 
 const InputComment = () => {
   const { id } = useParams();
+  const location = useLocation();
+  const history = useHistory();
+
   const [comment, setComment] = useState("");
   // Image upload
   const [image, setImage] = useState('');
@@ -44,8 +47,8 @@ const InputComment = () => {
       } catch (err) {
           console.error(err.message)
       }
-      
-      window.location=""
+      history.push("/");
+      history.push(location.pathname);
   }
 
   return (
