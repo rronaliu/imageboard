@@ -1,4 +1,4 @@
-CREATE DATABASE imageboard;
+-- CREATE DATABASE imageboard;
 
 CREATE TABLE post (
     post_id SERIAL PRIMARY KEY,
