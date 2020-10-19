@@ -1,4 +1,7 @@
 const express = require("express");
+// new 
+const data_model = require('./model')
+
 const app = express();
 const cors = require("cors");
 const pool = require("./db");

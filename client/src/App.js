@@ -6,6 +6,15 @@ import InputPost from './components/InputPost.js';
 import ListPosts from './components/ListPosts.js';
 import Post from "./components/Post.js";
 
+function getModel () {
+  fetch('http://localhost:3000')
+  .then(response => {
+  return response.text();
+  })
+  .then(data => {
+  setModel(data);
+  });
+  }
 
 function App() {
   return (
