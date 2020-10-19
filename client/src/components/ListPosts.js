@@ -75,7 +75,7 @@ const ListPosts = () => {
         {filteredPosts.map((post) => (
           
       <Card key={post.post_id} className="text-center col-md-4 col-lg-3 m-1 my-5 bg-dark" style={{ maxWidth: "18rem" }}>
-        <button className="btn btn-outline-danger" onClick={() => deletePost(post.post_id)}>X</button>
+        {/* <button className="btn btn-outline-danger" onClick={() => deletePost(post.post_id)}>X</button> */}
         <Link to={`/posts/${post.post_id}`} style={{textDecoration: "none", color: "white"}}>
         <Card.Body>
         <Card.Img variant="top" src={post.image} />
