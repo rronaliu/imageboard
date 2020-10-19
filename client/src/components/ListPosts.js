@@ -30,17 +30,17 @@ const ListPosts = () => {
     };
 
 
-    //DELETE POST
-  //   const deletePost = async id => {
-  //     try {
-  //         const response = await fetch(`/posts/${id}`, {
-  //             method: "DELETE"
-  //         });
-  //         setPosts(posts.filter(post => post.post_id !== id));
-  //     } catch (err) {
-  //         console.error(err.message)
-  //     }
-  // }
+    // DELETE POST
+    const deletePost = async id => {
+      try {
+          const response = await fetch(`/posts/${id}`, {
+              method: "DELETE"
+          });
+          setPosts(posts.filter(post => post.post_id !== id));
+      } catch (err) {
+          console.error(err.message)
+      }
+  }
     
 
     useEffect(() => {
